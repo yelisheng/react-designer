@@ -4,106 +4,72 @@ import Designer from '../../src/Designer';
 export default class extends Component {
   state = {
     objects: [{
-      "width": 163,
-      "height": 84,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(0, 123, 255, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 17,
-      "y": 15
-    }, {
-      "width": 70,
-      "height": 146,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(255, 255, 255, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 19,
-      "y": 109
-    }, {
-      "width": 81,
-      "height": 69,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(241, 97, 99, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 100,
-      "y": 110
-    }, {
-      "width": 231,
-      "height": 70,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(0, 123, 255, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 100,
-      "y": 187
-    }, {
-      "width": 183,
-      "height": 60,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(255, 241, 0, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 19,
-      "y": 265
-    }, {
-      "width": 118,
-      "height": 119,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(241, 97, 99, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 211,
-      "y": 266
-    }, {
-      "width": 82,
-      "height": 51,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(255, 255, 255, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 120,
-      "y": 333
-    }, {
-      "width": 89,
-      "height": 50,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(241, 97, 99, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 21,
-      "y": 334
-    }, {
-      "width": 143,
-      "height": 160,
-      "rotate": 0,
-      "strokeWidth": 0,
-      "fill": "rgba(255, 241, 0, 1)",
-      "radius": "0",
-      "blendMode": "normal",
-      "type": "rectangle",
-      "x": 190,
-      "y": 16
-    }]
+          blendMode:"lighten",
+          fill :"rgba(0, 123, 255, 1)",
+          width:91,
+          height:86,
+          radius:"0",
+          rotate:0,
+          strokeWidth:0,
+          type:"rectangle",
+          x:122,
+          y:147
+    },
+    {
+          blendMode:"lighten",
+          fill :"rgba(0, 123, 200, 1)",
+          width:150,
+          height:186,
+          radius:"0",
+          rotate:0,
+          strokeWidth:0,
+          type:"rectangle",
+          x:122,
+          y:147
+    },
+    {
+          closed:false,
+          fill:"#e3e3e3",
+          moveX:211,
+          moveY:228,
+          path:[{
+            x:256.5,
+            x1:211,
+            x2:256.5,
+            y:179,
+            y1:228,
+            y2:179},
+            {
+            x:256.5,
+            x1:256.5,
+            x2:256.5,
+            y:179,
+            y1:179,
+            y2:179,
+            }
+          ],
+          rotate:0,
+          stroke:"gray",
+          strokeWidth:1,
+          type:"polygon",
+          x:211,
+          y:228
+    },
+    // {
+    //       x1:0,
+    //       y1:0,
+    //       x2:100,
+    //       y2:100,
+    //       stroke:"black" ,    
+    //       strokeWidth:2,
+    //       type:"line",
+        
+    // }
+    ]
   };
+
+
+
 
   handleUpdate(objects) {
     this.setState({objects});
@@ -112,7 +78,8 @@ export default class extends Component {
   render() {
     return (
       <Designer
-        width={350} height={400}
+        backgroundImage = {"url(http://192.168.134.88:9000/yys/wf/bj.jpg)"}
+        width={432} height={760}
         objects={this.state.objects}
         onUpdate={this.handleUpdate.bind(this)}/>
     );

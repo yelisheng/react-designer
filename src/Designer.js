@@ -10,12 +10,13 @@ import SVGRenderer from './SVGRenderer';
 import Handler from './Handler';
 import {modes} from './constants';
 import * as actions from './actions';
-import {Text, Path, Rect, Circle} from './objects';
+import {Line, Text, Path, Rect, Circle} from './objects';
 import PanelList from './panels/PanelList';
 
 class Designer extends Component {
   static defaultProps = {
     objectTypes: {
+      //'line': Line,
       'text': Text,
       'rectangle': Rect,
       'circle': Circle,
@@ -362,11 +363,11 @@ class Designer extends Component {
   renderSVG() {
     let canvas = this.getCanvas();
     let {width, height, canvasOffsetX, canvasOffsetY} = canvas;
-    let {background, objects, svgStyle, objectTypes} = this.props;
+    let {backgroundImage, objects, svgStyle, objectTypes} = this.props;
 
     return (
       <SVGRenderer 
-         background={background}
+         backgroundImage={backgroundImage}
          width={width}
          canvas={canvas}
          height={height}

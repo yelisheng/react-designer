@@ -70,6 +70,10 @@ export default class Icon extends Component {
         return (
           <circle r={8} cx={11} cy={12} />
         );
+     case 'line':
+     return (
+       <line  x1={20} y1={100} x2={100} y2={100} />
+     );   
       case 'polygon':
         return (
           <g transform={"scale(0.034) translate(100 25)"}>
